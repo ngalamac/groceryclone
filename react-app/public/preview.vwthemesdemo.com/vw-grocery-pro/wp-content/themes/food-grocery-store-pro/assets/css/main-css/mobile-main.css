@@ -1,0 +1,951 @@
+@media screen and (max-width: 575px){
+  .track-main-box.p-0,.currency-box,.translate_lang {
+    margin: 5px 0;
+  }
+  #newsletter input[type="email"]{
+    width: 100%;
+  }
+  .track-main-box:hover form.track_order{
+    width: 300px;
+  }
+  .hotline-box {
+    font-size: 14px !important;
+  }
+  .alg_currency_select{
+    width: width: 152px !important;
+  }
+  .product-search-info{
+    padding: 10px 18px;
+  }
+  #topbar-search .widget.woocommerce.widget_product_search {
+    margin-top: 0px;
+  }
+  .left-sale, .middle-sale, .right-sale{
+    height: auto;
+  }
+  #recommended .cart-box, #recommended .wishlist_text{
+    opacity: 1;
+  }
+  .text-right-side{
+    padding: 0 !important;
+  }
+  #header-main {
+    padding: 0 12px;
+  }
+  .product-search-info form button{
+    padding: 11px 15px;
+  }
+  .selling-categories-number{
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .selling-content-box{
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 576px){
+  .product-search-info{
+    padding: 10px 18px;
+  }
+  #topbar-search .widget.woocommerce.widget_product_search {
+    margin-top: 0px;
+  }
+  #newsletter input[type="email"]{
+    width: 100%;
+  }
+  .vwsmp_front {
+    text-align: center;
+  }
+  .woocmrs_icons{
+    margin-top: 10px;
+  }
+  .selling-categories-box {
+    margin-bottom: 15px;
+  }
+  .playstore_app img, .playstore_apple img {
+    height: 45px;
+  } 
+  .selling-content-box{
+    justify-content: center;
+  } 
+}
+@media screen and (max-width: 991px) and (min-width: 768px){
+  #header-main {
+    padding: 0 15px;
+  }
+  .alg_currency_select{
+    width: 70px;
+  }
+  #topbar-search .widget.woocommerce.widget_product_search {
+    margin-top: 2px;
+  }
+  .product-search-info{
+    padding: 9px 18px;
+  }  
+  .selling-categories-box {
+    margin-bottom: 15px;
+  }
+  #client-worked .shop-head h2 {
+    padding: 14px !important;
+    font-size: 20px;
+  }
+  .selling-categories-box{
+    margin: 0 auto 20px !important;
+  }
+  #cat_toggle.cat_toggle{
+    position: static !important;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 992px){
+  .alg_currency_select{
+    width: 66px;
+  }
+  .hotline-box{
+    font-size: 15px;
+  }
+  #cat_toggle.cat_toggle{
+    display: none;
+  }
+  .top-sale-title{
+    font-size: 16px;
+  }
+  .deals-flipkart-tabs ul.nav{
+    display: flex;
+  }
+  #order-now .right-heading h3{
+    font-size: 20px;
+  }
+  #order-now .right-content p{
+    width: 100%;
+  }
+  .selling-categories-body {
+    padding: 10px 0;
+  }
+  #client-worked .shop-head h2 {
+    padding: 0px !important;
+  }
+  #selling-categories{
+    padding-bottom: 20px;
+  }
+  .selling-catg.row{
+    padding: 30px;
+  }
+  .selling-catg.row{
+    right: 9em;
+  }
+  .selling-button{
+    padding: 15px 25px;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 1025px){
+  #cat_toggle.cat_toggle{
+    display: none;
+  }
+  .alg_currency_select{
+    width: 69px;
+  }
+  #recommended .nav-link{
+    padding: 0.5rem 10px;
+  }
+  .deals-flipkart-tabs ul.nav{
+    display: flex;
+  }
+  #slider .slider-box h1{
+    line-height: 60px;
+  }
+  .selling-catg.row{
+    right: 4em;
+  }
+  #selling-categories{
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1200px){
+  .alg_currency_select{
+    width: 70px;
+  }
+  p#timer .numbers {
+    padding: 10px 5px;
+    height: 75px;
+    width: 75px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1040px){
+  .main-header .side-navigation, #shop-by-brand .owl-nav, #video-product .owl-nav, #client-worked .owl-nav {
+    display: none;
+  }
+  .font-size15{
+    /* font-size: 12px; */
+  }
+  #our_products .owl-nav button{
+    display: none;
+  }
+  .headerbar,.side-navigation,.side-navigation li,.side-navigation ul li a,.side-navigation ul ul li,.side-navigation li.current_page_item {
+    display: block;
+  }
+  .side-navigation ul ul{
+    display: block !important;
+    background: unset;
+    position: relative;
+  }
+  .side-navigation ul ul li{
+    border-bottom: unset;
+    padding: 5px 18px;
+  }
+  .side-navigation ul ul ul, .side-navigation ul ul{
+    left: 5px;
+  }
+  .headerbar, .close-sidebar {
+    cursor: pointer;
+  }
+  .hamburger {
+    font-size: 29px;
+    color: var(--black);
+  }
+  #sidebar1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: #232323;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+    padding-top: 60px;
+  }
+  .close-sidebar {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: block;
+    color: #ffffff;
+  }
+  .side-navigation li{
+    border-top: 1px #303030 solid;
+    display: block;
+    width: 18rem;
+    padding: 5px;
+  }
+  .side-navigation ul li a,.sticky .side-navigation a {
+    padding: 5px 10px;
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+  }
+  .side-navigation ul li ul li a:before {
+    content: "\00BB \00a0";
+  }
+  .side-navigation li a:before, .side-navigation li>a:before {
+    display: block;
+    left: -3px;
+    background-color: unset !important;
+    position: absolute;
+    bottom: 6px;
+    height: auto;
+    width: auto;
+    transform-origin: right top;
+    transform: unset;
+    transition: color .1s,transform .2s ease-out;
+  }
+  .dealy-deals-box, .help-contact-box, .topbar-box, .owl-dots{
+    text-align: center;
+  }
+  .product-search-info form {
+    width: 24%;
+  }
+  #topbar-search {
+    padding: 25px 10px 20px;
+  }
+  #slider .slider-box h1 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  #slider .slider-box h1 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  #slider .slider-button{
+    font-size: 18px;
+  }
+  #top_sale_banner .left-sale{
+    padding: 25px 25px;
+  }
+  #top_sale_banner, #video-product, #features, #shop-by-brand, #sale-organic, #deal_recommended, #banner, #our-menu, #our-blog{
+    padding: 20px;
+  }
+  #recommended .deals-flipkart-tabs ul li a{
+    padding: 5px 10px;
+  }
+  #recommended .owl-dots {
+    margin: -20px auto 18px;
+  }
+  #recommended .recommended-imgbox .text-box {
+    max-width: 100%;
+    padding: 70px 30px 130px;
+  }
+  #recommended .recommended-imgbox .price_box{
+    top: 32px;
+    left: 36%;
+  }
+  #browse-categories .owl-carousel .owl-item img, #shop-by-brand .owl-carousel .owl-item img, #video-product .owl-carousel .owl-item img, #featured-product .owl-carousel .owl-item img {
+    width: auto;
+  }
+  #client-worked .shop-head h2{
+    padding: 40px;
+  }
+  .selling-categories-box {
+    max-width: 70%;
+  }
+  #client-worked {
+    padding-bottom: 20px;
+  }
+  .blog-title h4 a{
+    font-size: 18px;
+  }
+  .order_left_title h3, #order-now .right-heading h3{
+    width: 100%;
+  }
+  .order_left_title:before{
+    /* top: 56%; */
+  }
+  #our-menu .container {
+    background-size: auto;
+  }
+  #recommended .recommended-imgbox .text-box{
+    margin-bottom: -30px;
+  }
+  .selling-catg-box {
+    padding: 35px 25px;
+  }
+  .side-navigation ul li a{
+    color: #fff !important;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 1025px){
+  .product-search-info form{
+    /* margin-right: 0px; */
+  }
+  #client-worked .shop-head h2{
+    padding: 25px 0px;
+  }
+  .top-sale-title{
+    font-size: 16px;
+  }
+  #video-product .owl-nav{
+    display: none;
+  }
+  .order_left_title {
+    padding: 30px;
+  }
+  .order_left_title h3{
+    width: 80%;
+  }
+  #recommended .recommended-imgbox .price_box {
+    top: 23px;
+    left: 38%;
+  }
+  #recommended .recommended-imgbox .text-box {
+    padding: 60px 60px 100px;
+  }
+  #recommended .recommended-imgbox .text-box{
+    margin-bottom: -30px;
+  }
+  .selling-catg-box {
+    padding: 35px 25px;
+  }
+  #order-now .right-heading h3 {
+    width: 100%;
+  }
+  #order-now .right-data {
+    padding-top: 25px;
+    padding-bottom: 0px;
+  }
+  #our_products h3 {
+    font-size: 18px;
+  }
+  #our_products button.owl-prev{
+    top: 4px;
+    right: 18px;
+  }
+  #our_products button.owl-next{
+    margin-top: 4px;
+  }
+  #our_products .product_box.text-center.pt-5 {
+    padding-top: 5px !important;
+  }
+  #our_products .countdowntimer.pt-5{
+    padding-top: 14px !important;
+  }
+  #client-worked .shop-by-cate-box img{
+    padding: 38px 0;
+  }
+  #client-worked .shop-head h2{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 991px){
+  .top-none  {
+    display: none;
+  }
+  #newsletter h3.font-famrubik
+  {
+      top: 7px;
+      left: 13%;
+  }
+  p.newsltr_text{
+    top: 39px;
+    left: 13%;
+  }
+  .woocommerce .summary h1 {
+    font-size: 30px;
+    line-height: 55px;
+  }
+  .woocommerce div.product .woocommerce-tabs .panel,
+  .woocommerce div.product {
+    text-align: center;
+  }
+  #slider .slide_nav i {
+    font-size: 12px;
+  }
+  .meta-box{
+    text-align: center;
+  }
+  #slider .carousel-prev-button, #slider .carousel-next-button{
+    width: 35px;
+    height: 35px;
+  }
+  #slider .carousel-prev-button{
+    left: 12px;
+  }
+  #slider .carousel-next-button{
+    right: 12px;
+  }
+  .middle-sale h2 {
+    max-width: 55%;
+  }
+  #top_sale_banner .middle-but {
+    padding-top: 15px;
+  }
+  .top-sale-title{
+    font-size: 17px;
+  }
+  .selling-catg.row,#our-menu .afterbg:after {
+    position: unset;
+  }
+  #client-worked .shop-by-cate-box img {
+    padding: 30px 0;
+  }
+  .shop-categories-box:hover {
+    /* border: 2px solid #d51c22; */
+  }
+  #selling-categories, #deal_recommended, .shop-head h3, .deals-flipkart-tabs.text-right, #featured-product, .newsimg, .paymenttext p {
+    text-align: center !important;
+  }
+  #recommended .recommended-imgbox .text-box {
+    max-width: 100%;
+    padding: 49px 20px 55px;
+    text-align: left;
+  }
+  #recommended .recommended-imgbox .small_mainhead {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  #recommended .recommended-imgbox .price-symbol{
+    top: -2px;
+    right: 0;
+  }
+  #recommended .recommended-imgbox .price-value{
+    font-size: 20px;
+  }
+  #recommended .recommended-imgbox .price_box {
+    top: 13px;
+    left: 80%;
+  }
+  .recommended-imgbox .price_box{
+    padding: 4px 10px;
+  }
+  #top_sale_banner .left-sale, .right-sale, .middle-sale, #shop-by-brand .left-sale, #sale-organic .left-sale, .newsimg{
+    margin-bottom: 10px;
+  }
+  #our_products .owl-dots {
+    padding-bottom: 8px;
+    padding-top: 0;
+  }
+  .banner-content h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  #selling-categories {
+    background-size: unset;
+  }
+  .menu-padding {
+    padding-top: 20px;
+  }
+  #our-menu .smalltitle, #selling-categories .selling-categories-head h3, #selling-categories .services-text {
+    max-width: 100%;
+  }
+  #featured-product .star-rating {
+    margin: 8px auto;
+  }
+  #order-now .right-heading h3{
+    font-size: 25px;
+  }
+  #order-now .right-content p{
+    width: 100%;
+  }
+  #order-now .right-data{
+    padding: 40px;
+  }
+  #client-worked .shop-head h2 {
+    padding: 33px;
+  }
+  #featured-product{
+    padding-bottom: 0px;
+  }
+  #selling-categories .selling-categories-head h3, #selling-categories .services-text{
+    text-align: center;
+  }
+  #featured-product .rating_count {
+    top: -8px;
+  }
+  #our_products h3 {
+    font-size: 18px;
+    text-align: left;
+  }
+  #our_products .owl-nav {
+    margin-top: 5px;
+  }
+  #our_products .product_box.text-center.pt-5 {
+    padding-top: 5px !important;
+  }
+  #our_products .countdowntimer.pt-5{
+    padding-top: 18px !important;
+  }
+  .topbar-box.top-icon {
+    padding-left: 0;
+  }
+  #client-worked {
+    padding-bottom: 0px;
+    background-color: #ffffff;
+  }
+  #client-worked .owl-stage-outer{
+    background-color: #f3f3f3;
+  }
+  #selling-categories {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  .selling-catg-box {
+    border: 1px solid #ecede7;
+  }
+  #video-product .owl-carousel .owl-stage-outer {
+    height: 390px !important;
+  }
+}
+@media screen and (max-width: 768px){
+  .top-sale-title{
+    font-size: 15px;
+  }
+  .left-sale p{
+    font-size: 13px;
+  }
+  .product-search-info form {
+    width: 30%;
+  }
+  .product-search-info form {
+    float: unset;
+    margin-right: 0;
+  }
+  .product-search-info form button{
+    height: 44px;
+  }
+  .cat_toggle{
+    display: none;
+  }
+  #slider .slider-box, .left-sale h2, .middle-sale h2, .right-sale h2, .banner-content h3{
+    width: 100%
+  }
+  .middle-sale h2{
+    width: 65%;
+  }
+  #slider .slider-box h1 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  #slider .slider-box p, #recommended .recommended-imgbox .small-head, #recommended .recommended-imgbox .price-btn, #recommended .recommended-imgbox .price-symbol{
+    font-size: 15px;
+  }
+  #slider .slider-button {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+  .right-sale, .middle-sale{
+    padding: 25px 25px;
+  }
+  #browse-categories{
+    padding-bottom: 20px;
+  }
+  .video-product-tabs ul li a {
+    padding: 5px 10px;
+  }
+  #selling-categories {
+    text-align: center;
+  }
+  #selling-categories {
+    padding: 0px 20px;
+  }
+  .selling-categories-body {
+    padding: 0;
+  }
+  #selling-categories .selling-categories-head h3, #selling-categories .services-text, .selling-categories-box {
+    max-width: 100%;
+  }
+  .woocommerce-cart table.cart td.actions .coupon .input-text{
+    width: 50%;
+  }
+  #recommended .recommended-imgbox .small_mainhead {
+     font-size: 16px;
+   }
+   #recommended .recommended-imgbox .small-head{
+     font-size: 12px;
+   }
+   #recommended .recommended-imgbox .price_box {
+      left: 76%;
+   }
+}
+@media screen and (max-width: 767px){
+  #popupmodal .news-content{
+    width: 100%;
+  }
+  .signup {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .fornews {
+    font-size: 14px;
+  }
+  .signupand {
+    font-size: 30px;
+    line-height: 25px;
+  }
+  #popupmodal input[type="submit"]{
+    font-size: 12px;
+  }
+  .alg_currency_select{
+    width: 119px;
+  }
+  .text-right-side{
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 576px){
+  #slider .carousel-prev-button, #slider .carousel-next-button {
+    width: 30px;
+    height: 30px;
+  }
+  #topbar .text-right-side {
+    text-align: center;
+  }
+  #cart_animate{
+    left: 38%;
+  }
+  #newsletter h3.font-famrubik{
+    left: 24%;
+    font-size: 18px;
+  }
+  p.newsltr_text{
+    left: 19%;
+  /* line-height: 50px; */
+  }
+  #recommended .owl-dots{
+    display: none;
+  }
+  .playstore_app{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .video-product-tabs ul.nav{
+    text-align: center;
+    margin: 0;
+  }
+  .woocmrs_icons{
+    margin-top: 10px;
+  }
+  #slider .slide_nav i {
+    padding: 9px 11px;
+  }
+  #top_sale_banner .middle-but {
+    padding-top: 10px;
+  }
+  #slider .slider-button, #top_sale_banner .middle-sale a, #top_sale_banner .middle-sale .m-text, .discount-sec-title, .leftsale-box h3, .rightsale-box h3, .right-disscount, .banner-content h3, .sale-brand .left-disscount, #recommended .recommended-imgbox .price-btn, #recommended .recommended-imgbox .price-title, #recommended .recommended-imgbox .price-symbol {
+    font-size: 13px;
+  }
+  .browse-category-wrap {
+    margin-right: 0px;
+  }
+  .popupimg,.hotline-box, #order-now .right-data, .grocery-logo, .shipping-box, .woocmrs_icons, .feature-title, #video-product, .video-product-tabs ul, #client-worked .shop-head h2, #newsletter, .copyright, #footer #footer_box {
+    text-align: center;
+  }
+  .hotline-box{
+    font-size: 16px;
+  }
+  .postbox-content .vw-news-meta span{
+    padding: 0 10px;
+  }
+  .woocommerce div.product div.summary{
+    text-align: center !important;
+  }
+  .posttitle a {
+    font-size: 19px;
+  }
+  .blog-meta, .meta-box, #maincontent .meta-box{
+    /* font-size: 9px;
+    letter-spacing: 0px; */
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center !important;
+  }
+  .deals-flipkart-tabs {
+    text-align: center !important;
+  }
+  #recommended h2{
+    font-size: 15px;
+  }
+  #recommended .deals-flipkart-tabs ul li a{
+    font-size: 13px;
+    /* padding: 1px; */
+  }
+  .translate_lang .switcher{
+    margin: 0 auto;
+  }
+  .dealy-deals-box, .shipping-box, .currency-box, .translate_lang {
+    padding: 2px 0;
+  }
+  .product-search-info form {
+    width: 0%;
+  }
+  .cat_togglee {
+    margin-bottom: 8px;
+  }
+  .hotline-box {
+    padding: 8px 0;
+  }
+  #slider .slider-box h1 {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  #slider .slider-box p, #slider .slider-box span{
+    display: none;
+  }
+  #slider .slider-button {
+    padding: 8px 25px;
+  }
+  .right-sale h2{
+    max-width: 75%;
+  }
+  .right-sale .offer_box a{
+    left: unset;
+    right: 0;
+  }
+  .discount-sec-numb, #recommended .recommended-imgbox .small-head{
+    font-size: 12px;
+  }
+  #recommended .recommended-imgbox .small-head{
+    line-height: 0;
+  }
+  #recommended .recommended-imgbox .small_mainhead, #recommended .recommended-imgbox .price-value, .selling-button, #our-menu .menu-but a{
+    font-size: 13px;
+  }
+  #recommended .recommended-imgbox .text-box{
+        padding: 35px 8px 50px;
+  }
+  #recommended .recommended-imgbox .price_box {
+    top: 8px;
+    left: 73%;
+    padding: 4px 5px;
+  }
+  #shop-by-brand .left-sale, #shop-by-brand .right-sale, #sale-organic .left-sale, #sale-organic .right-sale{
+    padding: 20px 15px;
+    height: auto;
+  }
+  .leftsale-box h3,#selling-categories .selling-categories-head h3, .selling-categories-number h4, #our-menu .smalltitle {
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 16px;
+  }
+  .rightsale-box h3{
+    font-size: 15px;
+  }
+  #our-menu .menu-padding,
+    #our-menu .menus-dec{
+    text-align: center;
+  }
+  .leftsale-box, .rightsale-box {
+    padding-top: 0px;
+  }
+  .discount-box {
+    right: 5%;
+    top: 3%;
+  }
+  .right-disscount, .banner-content h3, .sale-brand .left-disscount{
+    max-width: 50%;
+    line-height: 16px;
+  }
+  .banner-btn {
+    padding: 20px 0 30px;
+  }
+  .banner-btn a.view-all, .selling-catg.row{
+    padding: 15px 15px;
+  }
+  .banner-content h3{
+    line-height: 28px;
+    font-size: 20px;
+  }
+  #client-worked .shop-head h2{
+    padding: 19px;
+  }
+  #client-worked .shop-by-cate-box img {
+    width: auto;
+    padding: 15px 0;
+  }
+  .selling-button, #our-menu .menu-but a{
+    padding: 10px 20px;
+  }
+  .our-blog-head h3{
+    font-size: 25px;
+  }
+  .blog-data{
+    padding: 30px 20px;
+  }
+  #our-blog{
+    padding-bottom: 40px;
+  }
+  .order_left_title{
+    padding: 20px;
+  }
+  .order_left_title h3{
+    font-size: 20px;
+  }
+  #our-blog .owl-stage-outer{
+    padding-top: 5px;
+  }
+  .discount-box {
+    height: 50px;
+    width: 50px;
+    line-height: 15px;
+  }
+  .left-sale p, #recommended .recommended-imgbox .text-box{
+    margin-bottom: 0px;
+  }
+  .shop-categories-box, .shop-categories-box:hover, #browse-categories .category-box, #browse-categories .category-box:hover {
+    border: unset;
+  }
+  #popupmodal.modal {
+    top: -20px;
+  }
+  #popupmodal .news-content {
+    width: 90%;
+  }
+  .sign-newstext {
+    padding: 25px 25px 0px;
+  }
+  .signup {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .signupand {
+    font-size: 25px;
+    line-height: 20px;
+  }
+  .fornews {
+    font-size: 12px;
+  }
+  .popupimg img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  .single-product.woocommerce div.product div.images, .single-product.woocommerce div.product div.images{
+    width: 100%;
+  }
+  .woocommerce div.product .woocommerce-tabs .panel,
+  .woocommerce div.product,
+  ol.wp-block-latest-comments
+  {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 2560px){
+  #cart_animate{
+    left: 32%;
+  }
+  /*#cart_animate1{
+  left: 46%;
+  }*/
+  #header .hot_number{
+    padding-right: 13px;
+  }
+  .top-icon i, .top-icon a, #footer .footer-details p, #footer ul li a, .widget_recent_entries li a, .widget_recent_entries span.post-date{
+    font-size: 16px;
+  }
+  #top_sale_banner .middle-sale{
+    padding: 46px 30px;
+  }
+  #top_sale_banner .right-sale{
+      padding:32px 30px;
+  }
+  .leftsale-box h3, .rightsale-box h3{
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .right-disscount, .left-sale p{
+        font-size: 18px;
+  }
+  .selling-categories-head h3{
+    font-size: 38px;
+  }
+  .video-product-tabs ul li a{
+    font-size: 16px;
+  }
+  .blog-title h4 a{
+    font-size: 25px;
+  }
+  .blog-meta, .countdowntimer .numbers span {
+    font-size: 14px;
+  }
+  #featured-product .right-product-details .prod-title a{
+    line-height: 40px;
+  }
+  #order-now .right-heading h3{
+    font-size: 61px;
+  }
+  .selling-catg.row{
+    top: 0;
+    left: -44%;
+    right: 58%;
+  }
+  .paymenttext img{
+    max-width: 60%;
+  }
+  .recommended-imgbox .text-box {
+    max-width: 70%;
+    padding: 90px 60px 165px;
+    margin-top: -40px;
+  }
+  .product-search-info.d-flex{
+    display: none;
+  }
+  #our_products h3{
+      margin-left: 48px;
+  }
+  #our_products .product_name{
+  margin-left: 36px;
+  margin-right: 36px;
+  }
+}
