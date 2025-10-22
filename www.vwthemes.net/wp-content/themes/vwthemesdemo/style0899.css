@@ -1,0 +1,1114 @@
+/*
+Theme Name: VW Themes Demo
+Theme URI: https://wordpress.org/themes/vwthemesdemo/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: VW Themes Demo brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vwthemesdemo
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
+--------------------------------------------------------------*/
+
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;	
+}
+.bg-main-box{
+  background: #b7d38d;
+}
+#page {
+	position: relative;
+	word-wrap: break-word;
+}
+
+.wrap {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 700px;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.wrap:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+/*--------------------------------------------------------------
+13.1 Header
+--------------------------------------------------------------*/
+
+#masthead .wrap {
+	position: relative;
+}
+
+.site-header {
+	background-color: #fafafa;
+	position: relative;
+}
+
+/* Site branding */
+
+.site-branding {
+	padding: 1em 0;
+	position: relative;
+	-webkit-transition: margin-bottom 0.2s;
+	transition: margin-bottom 0.2s;
+	z-index: 3;
+}
+
+.site-branding a {
+	text-decoration: none;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.site-branding a:hover,
+.site-branding a:focus {
+	opacity: 0.7;
+}
+
+.site-title {
+	clear: none;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 800;
+	line-height: 1.25;
+	letter-spacing: 0.08em;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.site-title,
+.site-title a {
+	color: #222;
+	opacity: 1; /* Prevent opacity from changing during selective refreshes in the customize preview */
+}
+
+body.has-header-image .site-title,
+body.has-header-video .site-title,
+body.has-header-image .site-title a,
+body.has-header-video .site-title a {
+	color: #fff;
+}
+
+.site-description {
+	color: #666;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	margin-bottom: 0;
+}
+
+body.has-header-image .site-description,
+body.has-header-video .site-description {
+	color: #fff;
+	opacity: 0.8;
+}
+
+.custom-logo-link {
+	display: inline-block;
+	padding-right: 1em;
+	vertical-align: middle;
+	width: auto;
+}
+
+.custom-logo-link img {
+	display: inline-block;
+	max-height: 80px;
+	width: auto;
+}
+
+body.home.title-tagline-hidden.has-header-image .custom-logo-link img,
+body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
+	max-height: 200px;
+	max-width: 100%;
+}
+
+.custom-logo-link a:hover,
+.custom-logo-link a:focus {
+	opacity: 0.9;
+}
+
+
+/*--------------------------------------------------------------
+13.2 Front Page
+--------------------------------------------------------------*/
+
+.vwthemesdemo-front-page .site-content {
+	padding: 0;
+}
+
+.vwthemesdemo-panel {
+	overflow: hidden;
+	position: relative;
+}
+
+.panel-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+.panel-image:before {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+100 */ /* FF3.6-15 */
+	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+	bottom: 0;
+	content: "";
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 100px;
+}
+
+.vwthemesdemo-front-page article:not(.has-post-thumbnail):not(:first-child) {
+	border-top: 1px solid #ddd;
+}
+
+.panel-content {
+	position: relative;
+}
+
+.panel-content .wrap {
+	padding-bottom: 0.5em;
+	padding-top: 1.75em;
+}
+
+/* Panel edit link */
+
+.vwthemesdemo-panel .edit-link {
+	display: block;
+	margin: 0.3em 0 0;
+}
+
+.vwthemesdemo-panel .entry-header .edit-link {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+/* Front Page - Recent Posts */
+
+.vwthemesdemo-front-page .panel-content .recent-posts article {
+	border: 0;
+	color: #333;
+	margin-bottom: 3em;
+}
+
+.recent-posts .entry-header {
+	margin-bottom: 1.2em;
+}
+
+.page .panel-content .recent-posts .entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 300;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.vwthemesdemo-panel .recent-posts .entry-header .edit-link {
+	color: #222;
+	display: inline-block;
+	font-size: 11px;
+	font-size: 0.6875rem;
+	margin-left: 1em;
+}
+
+/*--------------------------------------------------------------
+13.3 Regular Content
+--------------------------------------------------------------*/
+
+.site-content-contain {
+	background-color: #fff;
+	position: relative;
+}
+
+.site-content {
+	padding: 2.5em 0 0;
+}
+
+/*--------------------------------------------------------------
+13.4 Posts
+--------------------------------------------------------------*/
+
+/* Post Landing Page */
+
+.sticky {
+	position: relative;
+}
+
+.post:not(.sticky) .icon-thumb-tack {
+	display: none;
+}
+
+.sticky .icon-thumb-tack {
+	display: block;
+	height: 18px;
+	left: -1.5em;
+	position: absolute;
+	top: 1.65em;
+	width: 20px;
+}
+
+.page .panel-content .entry-title,
+.page-title,
+body.page:not(.vwthemesdemo-front-page) .entry-title {
+	color: #222;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.entry-header .entry-title {
+	margin-bottom: 0.25em;
+}
+
+.entry-title a {
+	color: #333;
+	text-decoration: none;
+	margin-left: -2px;
+}
+
+.entry-title:not(:first-child) {
+	padding-top: 0;
+}
+
+.entry-meta {
+	color: #767676;
+	font-size: 11px;
+	font-size: 0.6875rem;
+	font-weight: 800;
+	letter-spacing: 0.1818em;
+	padding-bottom: 0.25em;
+	text-transform: uppercase;
+}
+
+.entry-meta a {
+	color: #767676;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.pagination,
+.comments-pagination {
+	border-top: 1px solid #eee;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 800;
+	padding: 2em 0 3em;
+	text-align: center;
+}
+
+.pagination .icon,
+.comments-pagination .icon {
+	width: 0.666666666em;
+	height: 0.666666666em;
+}
+
+.comments-pagination {
+	border: 0;
+}
+
+.page-numbers {
+	display: none;
+	padding: 0.5em 0.75em;
+}
+
+.page-numbers.current {
+	color: #767676;
+	display: inline-block;
+}
+
+.page-numbers.current .screen-reader-text {
+	clip: auto;
+	height: auto;
+	overflow: auto;
+	position: relative !important;
+	width: auto;
+}
+
+.prev.page-numbers,
+.next.page-numbers {
+	background-color: #ddd;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 24px;
+	font-size: 1.5rem;
+	line-height: 1;
+	padding: 0.25em 0.5em 0.4em;
+}
+
+.prev.page-numbers,
+.next.page-numbers {
+	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.prev.page-numbers:focus,
+.prev.page-numbers:hover,
+.next.page-numbers:focus,
+.next.page-numbers:hover {
+	background-color: #767676;
+	color: #fff;
+}
+
+.prev.page-numbers {
+	float: left;
+}
+
+.next.page-numbers {
+	float: right;
+}
+
+/* Aligned blockquotes */
+
+.entry-content blockquote.alignleft,
+.entry-content blockquote.alignright {
+	color: #666;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	width: 48%;
+}
+
+/* Blog landing, search, archives */
+
+.blog .site-main > article,
+.archive .site-main > article,
+.search .site-main > article {
+	padding-bottom: 2em;
+}
+
+body:not(.vwthemesdemo-front-page) .entry-header {
+	padding: 1em 0;
+}
+
+body:not(.vwthemesdemo-front-page) .entry-header,
+body:not(.vwthemesdemo-front-page) .entry-content,
+body:not(.vwthemesdemo-front-page) #comments {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body:not(.vwthemesdemo-front-page) .entry-header {
+	padding-top: 0;
+}
+
+.blog .entry-meta a.post-edit-link,
+.archive .entry-meta a.post-edit-link,
+.search .entry-meta a.post-edit-link {
+	color: #222;
+	display: inline-block;
+	margin-left: 1em;
+	white-space: nowrap;
+}
+
+.search .page .entry-meta a.post-edit-link {
+	margin-left: 0;
+	white-space: nowrap;
+}
+
+.taxonomy-description {
+	color: #666;
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+/* More tag */
+
+.entry-content .more-link:before {
+	content: "";
+	display: block;
+	margin-top: 1.5em;
+}
+
+/* Single Post */
+
+.single-post:not(.has-sidebar) #primary,
+.page.page-one-column:not(.vwthemesdemo-front-page) #primary,
+.archive.page-one-column:not(.has-sidebar) .page-header,
+.archive.page-one-column:not(.has-sidebar) #primary {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 740px;
+}
+
+.single-featured-image-header {
+	background-color: #fafafa;
+	border-bottom: 1px solid #eee;
+}
+
+.single-featured-image-header img {
+	display: block;
+	margin: auto;
+}
+
+.page-links {
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 800;
+	padding: 2em 0 3em;
+}
+
+.page-links .page-number {
+	color: #767676;
+	display: inline-block;
+	padding: 0.5em 1em;
+}
+
+.page-links a {
+	display: inline-block;
+}
+
+.page-links a .page-number {
+	color: #222;
+}
+
+
+/*--------------------------------------------------------------
+13.5 Pages
+--------------------------------------------------------------*/
+
+.page-header {
+	padding-bottom: 2em;
+}
+
+.page .entry-header .edit-link {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.search .page .entry-header .edit-link {
+	font-size: 11px;
+	font-size: 0.6875rem;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.page:not(.home) #content {
+	padding-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+17.0 Customizer
+--------------------------------------------------------------*/
+
+.highlight-front-sections.vwthemesdemo-customizer.vwthemesdemo-front-page .vwthemesdemo-panel:after {
+	border: 2px dashed #0085ba; /* Matches visible edit shortcuts. */
+	bottom: 1em;
+	content: "";
+	display: block;
+	left: 1em;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	z-index: 1;
+}
+
+.highlight-front-sections.vwthemesdemo-customizer.vwthemesdemo-front-page .vwthemesdemo-panel .panel-content {
+	z-index: 2; /* Prevent :after from preventing interactions within the section */
+}
+
+/* Used for placeholder text */
+.vwthemesdemo-customizer.vwthemesdemo-front-page .vwthemesdemo-panel .vwthemesdemo-panel-title {
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: 3em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Show borders on the custom page panels only when the front page sections are being edited */
+.highlight-front-sections.vwthemesdemo-customizer.vwthemesdemo-front-page .vwthemesdemo-panel:nth-of-type(1):after {
+	border: none;
+}
+
+.vwthemesdemo-front-page.vwthemesdemo-customizer #primary article.panel-placeholder {
+	border: 0;
+}
+
+/* Add some space around the visual edit shortcut buttons. */
+.vwthemesdemo-panel > .customize-partial-edit-shortcut > button {
+	top: 30px;
+	left: 30px;
+}
+/* Ensure that placeholder icons are visible. */
+.vwthemesdemo-panel .customize-partial-edit-shortcut-hidden:before {
+	visibility: visible;
+}
+/*--------------------------------------------------------------
+19.0 Demo Top Bar CSS
+--------------------------------------------------------------*/
+#wpadminbar{display:none !important;}
+#introbar{font:normal 12px/1 arial;}
+#introbar img{border:none; padding:0; margin:0; vertical-align:middle;}
+#introbar a{text-decoration:none;font-size: 11px;}
+.mobile_woo a {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(180deg,#46801a,#169434);
+    padding: 4px 5px;
+    display: inline-block;
+    border-radius: 3px;
+}
+.mobile_woo a:hover {
+    background: linear-gradient(180deg,#169434,#46801a);
+}
+#demosite{border:none; padding:0; margin:0;}
+#introbar{clear:both; width:100%; padding:10px 0; background:#232323; z-index:9999; position:fixed; top:0; box-sizing:border-box;}
+#introbar .logointro{margin:0 0px 0 0;}
+#introbar .close{background:url(assets/images/close_hover.png) no-repeat left center;font-size: 12px; text-shadow: none; color: #ffffff; padding:0 0 0 16px;opacity: 1;margin-top: 12px;}
+#introbar .close:hover{background-image:url(assets/images/close.png); color:#90caf9;}
+#introbar .left{float:left !important; padding:5px 0 0 50px;}
+#introbar .right{float:right !important; padding-right:50px;width: 22%;}
+.clear{clear:both;}
+#introbar .purchase{margin-top: 5px; padding:1px 20px; display:inline-block; text-align:center; font:normal 13px/26px arial; color:#fff; box-sizing:border-box;letter-spacing: normal;-webkit-animation: stm-button 6s ease infinite;animation: stm-button 6s ease infinite;background-color: purple;}
+@keyframes stm-button{
+0%, 100% {
+    background: #7e3bd0;
+}
+33% {
+    background: #c73bd0;
+}
+66% {
+    background: #3bd0c9;
+}
+}
+.activator, a.activator{position:fixed; right:9px; top:0; padding:0; display:block; background:url(assets/images/up_hover.png) no-repeat center top; width:42px; height:36px; font:normal 0px Arial; text-align:center; z-index:9998;}
+.activator:hover, a.activator:hover{background-image:url(assets/images/up.png);}
+select option{padding:5px 0;}
+.theme_select { background: #232323; border: 1px solid #4f4f4f; color: #ffffff;cursor: pointer; width: 160px; font-size: 13px; }
+p.holiday_offer {
+	width: 100%;
+	color: #113665;
+	font-weight: bold;
+	font-size: 19px;
+    text-align: center;
+    margin: 5px 0 7px 0;
+}
+span.coupan-code {
+    color: #e22e21;
+    font-size: 20px;
+}
+.row.bg-offer {
+	display: none;
+}
+#introbar .col-md-6.col-md-offset-3{
+    margin: 0 auto;
+	text-align: right;
+}
+#introbar select{
+    height: 29px;
+}
+
+/* swicther CSS*/
+
+#switcher {
+    padding: 6px 0px 7px;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: transparent;
+    z-index: 99999;
+    position: fixed;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    margin-top: 5px;
+}
+.center {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    padding: 0 40px;
+}
+.fbar-separator {
+    height: 20px;
+    width: 1px;
+    background-color: #c9c9c9;
+    content: ' ';
+    vertical-align: middle;
+    margin: auto 40px;
+}
+.responsive a.active, .responsive a:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+.responsive a.desktop {
+	background:url('assets/images/devices.png') no-repeat 0 0;
+    width: 22px;
+    height: 25px;
+}
+.responsive a {
+    margin-right: 10px;
+    opacity: 0.5;
+    float: left;
+    -webkit-transition: all .5s ease;
+    -webkit-transition: all .5s ease .5s ease;
+    transition: all .5s ease .5s ease;
+}
+.responsive a.tabletlandscape {
+	background:url('assets/images/devices.png') no-repeat -82px 0;
+    width: 28px;
+    height: 25px;
+}
+.responsive a.tabletportrait {
+	background:url('assets/images/devices.png') no-repeat -125px 0;
+    width: 23px;
+    height: 25px;
+}
+.responsive a.mobilelandscape {
+	background:url('assets/images/devices.png') no-repeat -164px 0;
+    width: 24px;
+    height: 26px;
+}
+.responsive a.mobileportrait {
+	background:url('assets/images/devices.png') no-repeat -206px 0px;
+    width: 18px;
+    height: 25px;
+}
+.purchase a#clickthemefromdemo {
+    background-color: #ff7f66;
+    box-shadow: 0 3px 0 #cb6956;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+iframe#iframe {
+    margin: 52px auto 0 !important;
+    display: block;
+}
+footer#colophon {
+    display: none;
+    padding: 0;
+    margin: 0 !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+/* swicther CSS End*/
+.vwthemes_demo_html {
+	overflow:hidden;
+}
+.page-template-page-templatedemo-php iframe#iframe {
+	padding-bottom: 12px;
+}
+@media (min-width: 480px) {
+	#introbar .left{padding-left:20px;}
+	#introbar .right{padding-right:20px;}
+}
+@media screen and (max-width: 575px) {
+	#introbar .left{padding-left:5px;}
+	#introbar .right{padding-right:5px;}
+	#introbar .purchase{
+		width: 100%; 
+		padding: 0 0 2px 15px; 
+		line-height: 26px; 
+		background-position: center; 
+		height: 28px; 
+		overflow:hidden; 
+		border-radius:6px 0 0 6px; 
+		-moz-border-radius:6px 0 0 6px; 
+		-webkit-border-radius:6px 0 0 6px; 
+		-khtml-border-radius:6px 0 0 6px; 
+		box-sizing:border-box;
+		position: relative;
+		top: 0px;
+		margin-top: 6px;
+	}
+	#introbar {
+		padding-bottom: 40px;
+	}
+	#introbar .mobile_woo {
+		text-align: center;
+		padding-top: 10px;
+	}
+	#introbar span.coupon_code {
+		padding: 10px 10px 0 10px;
+		display: inline-block;
+	}
+	#introbar #switcher {
+		margin-top: 18px;
+	    width: 100%;
+	    position: unset;
+	}
+	#introbar .center {
+		margin: 0 auto;
+		width: auto;
+	}
+	#introbar .introbar-purchase {
+		text-align: center;
+	}
+	.site-header {
+		margin-top: 179px !important;
+	}
+	#introbar .intro-logo-close {
+		text-align: center;
+	}
+	#introbar .close {
+		float: none;
+	}
+	.page-template-page-templatedemo-php iframe#iframe {
+		padding-bottom: 138px;
+	}
+	#introbar .logointro {
+    	float: none !important;
+	}
+}
+@media screen and (max-width: 767px) and (min-width: 576px) {
+	#introbar {
+		padding-bottom: 40px;
+	}
+	#introbar .logointro {
+	    margin: 0 0 0 8px;
+	    float: none;
+	}
+	#introbar .mobile_woo {
+		text-align: center;
+	}
+	#introbar span.coupon_code {
+		padding: 10px 10px 0 10px;
+		display: inline-block;
+	}
+	#introbar #switcher {
+		margin-top: 12px;
+	    width: 100%;
+	    position: unset;
+	}
+	#introbar .purchase {
+	    width: 100%;
+	    margin-top: 5px;
+	}
+	#introbar .center {
+		margin: 0 auto;
+		width: auto;
+	}
+	#introbar .introbar-purchase {
+		text-align: center;
+		padding-top: 10px;
+	}
+	.site-header {
+		margin-top: 159px !important;
+	}
+	#introbar .intro-logo-close {
+		text-align: center;
+	}
+	#introbar .close {
+		float: none;
+	}
+	.page-template-page-templatedemo-php iframe#iframe {
+		padding-bottom: 119px;
+	}
+}
+@media screen and (max-width: 991px) and (min-width: 767px) {
+	#introbar .introbar-purchase {
+		padding-top: 10px;
+	}
+	.site-header {
+		margin-top: 93px !important;
+	}
+	.page-template-page-templatedemo-php iframe#iframe {
+		padding-bottom: 41px;
+	}
+}
+@media screen and (max-width: 1024px) and (min-width: 992px) {
+	#introbar .close {
+		position: relative;
+	}
+	#introbar .center {
+		padding: 0;
+	}
+	#introbar .purchase{
+		width: 146px; 
+		padding: 0px 5px 2px 18px; 
+		line-height:26px; 
+		background-position:right top; 
+		height:28px; 
+		overflow:hidden; 
+		border-radius:6px 0 0 6px; 
+		-moz-border-radius:6px 0 0 6px; 
+		-webkit-border-radius:6px 0 0 6px; 
+		-khtml-border-radius:6px 0 0 6px; 
+		box-sizing:border-box;
+		position: relative;
+		top: 10px;
+	}
+	.site-header {
+		margin-top: 67px !important;
+	}
+	.page-template-page-templatedemo-php iframe#iframe {
+		padding-bottom: 26px;
+	}
+	.col-lg-2.col-md-4.introbar-purchase {
+    	padding-left: 0;
+	}
+	.theme_select{
+		width: 160px;
+    	font-size: 13px;
+	}
+	.introbar .introbar-purchase {
+    	padding-left: 0px;
+	}
+}
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+	#introbar .center {
+		padding: 0;
+	}
+	#introbar .purchase{
+		width:80px !important; 
+		padding:0 12px 2px 8px; 
+		line-height:26px; 
+		background-position:right top; 
+		height:28px; 
+		overflow:hidden; 
+		border-radius:6px 0 0 6px; 
+		-moz-border-radius:6px 0 0 6px; 
+		-webkit-border-radius:6px 0 0 6px; 
+		-khtml-border-radius:6px 0 0 6px; 
+		box-sizing:border-box;
+		position: relative;
+		top: 10px;
+	}
+	.site-header
+	{
+		margin-top: 67px !important;
+	}
+	.page-template-page-templatedemo-php iframe#iframe
+	{
+		padding-bottom: 27px;
+	}
+}
+
+/*--------------------------------------------------------------
+19.0 Media Queries
+--------------------------------------------------------------*/
+
+
+.mobile_woo1 { font-size: 13px; margin: 7px 0; font-weight:bold;}
+span.coupon_code.blink {
+    color: red;
+}
+.mobile_woo1 a {
+    color: #016194 !important;
+}
+#vw-demo {
+  text-align: center;
+  padding: 3% 0;
+}
+#vw-demo h2{
+  text-align: center;
+  font-size: 25px;
+  font-weight:bold;
+}
+#vw-demo hr{
+  width: 12%;
+  background: grey;
+  margin: 10px auto;
+  border-width: 2px;
+}
+.theme-detail {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  margin: 0px 0px 5%;
+  padding: 8%;
+  text-align: center;
+  background: rgb(33, 37, 42);
+  height: 340px;
+}
+.theme-detail.bundle-theme.wow.fadeInDown {
+  height: auto !important;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.theme-detail h4 {
+  margin: 0px 0px 25px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  padding: 0;
+}
+.button {
+  margin: 30px 0 2px;
+}
+.button a{
+  color: rgb(255, 255, 255);
+  padding: 8px 11px;
+  margin: 12px 0;
+  background: rgb(118, 181, 27);
+  display: inline;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.button a:hover {
+    background: #1689c8;
+}
+.button_box {
+    margin: 32px 0;
+}
+.button_box .button {
+    margin: 0 2px;
+}
+.top-header {
+    background: rgb(111, 168, 27);
+    padding: 15px 0;
+    margin-top: 40px;
+}
+.mobile_woo1 {
+    padding-top: 0px;
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+span.coupon_code {
+    color: #1bc744;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+@-webkit-keyframes blinker {
+ from {opacity: 1.0;}
+ to {opacity: 0.0;}
+}
+.blink{
+text-decoration: blink;
+-webkit-animation-name: blinker;
+-webkit-animation-duration: 0.6s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:ease-in-out;
+-webkit-animation-direction: alternate;
+}
+
+.header-btn {
+  margin: 10px 0;
+  text-align: right;
+}
+.header-btn a {
+    background: #a23421;
+    padding: 12px;
+    margin-left: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.header-btn a:hover{
+  background: #94b101;
+}
+.home-footer {
+    background: #222;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+.home-footer p{
+	margin-bottom: 0;
+}
+header.entry-header {
+    display: none;
+}
+.mobile_woo{
+	text-align: center;
+	color: #ffffff;
+	line-height:20px;
+	margin-top: 8px;
+}
+span.cm-2,
+span.cm-1 {
+	font-size: 18px;
+	color: #a23421;
+	font-weight: bold;
+}
+.responsive.responsive_buttons_demo {
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: -8px;
+}
+.theme_select i{
+	color: #b0bec5;
+}
+@media screen and (max-width:1023px){
+  #introbar #switcher {
+     display: none;
+  }}
+
+/* Custom pagination css start */
+.pagination{
+  margin: auto;
+}
+.page-numbers.current {
+  color: #fff;
+  display: inline-block;
+  background: red !important;
+}
+.page-numbers {
+  background-color: #76B51B !important;
+  color: #fff;
+  padding: 10px 20px !important;
+  font-weight: 600;
+  display: inline-block !important;
+  margin: 6px;
+  font-size: 18px !important;
+  line-height: unset !important;
+}
+.page-numbers.dots{
+  background: transparent !important;
+}
+.page-numbers:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+/* Custom pagination css start */
