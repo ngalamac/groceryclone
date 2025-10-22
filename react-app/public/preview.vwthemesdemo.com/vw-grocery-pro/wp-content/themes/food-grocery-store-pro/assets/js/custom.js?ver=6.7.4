@@ -1,0 +1,1181 @@
+/**
+ * Exoplanet Custom JS
+ *
+ * @package Exoplanet
+ *
+ * Distributed under the MIT license - http://opensource.org/licenses/MIT
+ */
+
+function showVWSearch() {
+  jQuery(".serach_outer").slideDown(700);
+  jQuery('.serach_outer').addClass("show-vw-search");
+  jQuery('.serach_outer').removeClass("hide-vw-search");
+}
+function closeVWSearch() {
+  jQuery(".serach_outer").slideUp(700);
+  jQuery('.serach_outer').removeClass("show-vw-search");
+  jQuery('.serach_outer').addClass("hide-vw-search");
+}
+
+/* Mobile responsive Menu*/
+jQuery(function($){
+  document.getElementById("open_nav").addEventListener("click", open);
+    function open() {
+      document.getElementById("sidebar1").style.width = "250px";
+      document.getElementById("sidebar1").style.display = "block";
+  }
+  document.getElementById("close_nav").addEventListener("click", close);
+    function close() {
+      document.getElementById("sidebar1").style.width = "0";
+      document.getElementById("sidebar1").style.display = "none";
+  }
+
+  $('.footer2 .row:first-child > div:first-child').attr('class', 'col-md-2')
+
+
+});
+
+jQuery(function($){
+  var price = jQuery('ins').text().substr(1);
+  jQuery("#hide_price").val(price);
+  // console.log("price="+price);
+  // var currency = jQuery('ins').text().substr(0, 1);
+  // var quantity = jQuery('[name=quantity]').val();
+
+  jQuery('.variable-item').click(function(){
+    setTimeout(function(){
+      var price = jQuery('ins').text().substr(1);
+      console.log("price="+price);
+      jQuery("#hide_price").val(price);
+     }, 1000);
+  });
+
+  jQuery('[name=quantity]').change(function(){
+    // var price = jQuery('ins').text().substr(1);
+    setTimeout(function(){
+      // var price =  jQuery("#hide_price").val();
+      var price = jQuery("#hide_price").val();
+      console.log("price="+price);
+      var currency = jQuery('ins').text().substr(0, 1);
+      var quantity = jQuery('[name=quantity]').val();
+      // console.log("qty="+quantity);
+      // console.log("price="+price);
+      jQuery('[name=quantity]').val(quantity);
+      console.log("quantity="+quantity);
+      // console.log("new price="+price);
+      jQuery('ins').text(currency + (parseInt(price) * parseInt(quantity)).toFixed(2));
+    }, 1001);
+  })
+
+});
+
+// For FAQ section
+jQuery(".toggle-accordion").on("click", function() {
+  var accordionId = jQuery(this).attr("accordion-id"),
+  numPanelOpen = jQuery(accordionId + ' .collapse.in').length;
+
+  jQuery(this).toggleClass("active");
+  if (numPanelOpen == 0) {
+    openAllPanels(accordionId);
+  } else {
+    closeAllPanels(accordionId);
+  }
+})
+
+openAllPanels = function(aId) {
+  console.log("setAllPanelOpen");
+  jQuery(aId + ' .panel-collapse:not(".in")').collapse('show');
+}
+closeAllPanels = function(aId) {
+  console.log("setAllPanelclose");
+  jQuery(aId + ' .panel-collapse.in').collapse('hide');
+}
+
+jQuery(function() {
+  //----- OPEN
+  jQuery('[data-popup-open]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-open');
+    jQuery('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+    e.preventDefault();
+  });
+
+  //----- CLOSE
+  jQuery('[data-popup-close]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-close');
+    jQuery('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+    e.preventDefault();
+  });
+});
+
+jQuery('document').ready(function(){
+  // Sticky Menu
+  var stickyon=jQuery('#sticky-onoff').text().trim();
+  var a1=stickyon.length;
+  var navbar = document.getElementById("header");
+  window.onscroll = function() {
+    if(a1==3) {
+      if(navbar!=null) {
+        myScrollNav();
+      }
+    }
+  }
+  if(navbar!=null) {
+    var sticky = jQuery( navbar ).offset().top;
+  }
+  function myScrollNav() {
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky");
+      navbar.classList.add("stickynavbar");
+    } else {
+      navbar.classList.remove("sticky");
+      navbar.classList.remove("stickynavbar");
+    }
+  }
+
+  // Home 2 Sticky Menu
+  var stickyon2=jQuery('#vwsticky-onoff').text().trim();
+  var a2=stickyon2.length;
+  var navbar2 = document.getElementById("vwheader");
+  window.onscroll = function() {
+    if(a2==3) {
+      if(navbar2!=null) {
+        myScrollNav2();
+      }
+    }
+  }
+  if(navbar2!=null) {
+    var sticky2 = jQuery( navbar2 ).offset().top;
+  }
+  function myScrollNav2() {
+    if (window.pageYOffset > sticky2) {
+      navbar2.classList.add("sticky");
+      navbar2.classList.add("stickynavbar");
+    } else {
+      navbar2.classList.remove("sticky");
+      navbar2.classList.remove("stickynavbar");
+    }
+  }
+
+  jQuery('.cat_togglee').click(function() {
+    jQuery('#cart_animate').toggle('slow');
+  });
+
+  jQuery('.cat_toggle span, .cat_toggle i').click(function() {
+    jQuery('#cart_animate1').toggle('slow');
+  });
+
+  jQuery('.vwcat_toggle').click(function() {
+    jQuery('#vwcart_animate').toggle('slow');
+  });
+
+  jQuery(document).click(function(e) {
+
+    if (e.target.id != 'cat_togglee' && !jQuery('#cat_togglee').find(e.target).length && e.target.id != 'cart_animate' && !jQuery('#cart_animate').find(e.target).length) {
+        jQuery("#cart_animate").hide();
+    }
+
+    if (e.target.id != 'cat_toggle' && !jQuery('#cat_toggle').find(e.target).length && e.target.id != 'cart_animate1' && !jQuery('#cart_animate1').find(e.target).length) {
+        jQuery("#cart_animate1").hide();
+    }
+
+    if (e.target.id != 'vwcat_toggle' && !jQuery('#vwcat_toggle').find(e.target).length && e.target.id != 'vwcart_animate' && !jQuery('#vwcart_animate').find(e.target).length) {
+        jQuery("#vwcart_animate").hide();
+    }
+  });
+
+  var recents_loop="";
+  var best_seller_loop="";
+  var shop_by_loop="";
+  var blog_loop="";
+  var browse_loop="";
+  var client_worked_loop="";
+  var video_game_loop="";
+
+  if(jQuery("#video-game-loop").text()=='true'){
+    video_game_loop=true;
+  }else{
+    video_game_loop=false;
+  }
+  if(jQuery("#best-seller-loop").text()=='true'){
+    best_seller_loop=true;
+  }else{
+    best_seller_loop=false;
+  }
+  if(jQuery("#browse-loop").text()=='true'){
+    browse_loop=true;
+  }else{
+    browse_loop=false;
+  }
+  if(jQuery("#fead-pro-loop").text()=='true'){
+    recents_loop=true;
+  }else{
+    recents_loop=false;
+  }
+  if(jQuery("#client-worked-loop").text()=='true'){
+    client_worked_loop=true;
+  }else{
+    client_worked_loop=false;
+  }
+  if(jQuery("#shop-by-loop").text()=='true'){
+    shop_by_loop=true;
+  }else{
+    shop_by_loop=false;
+  }
+  if(jQuery("#blogs-loop").text()=='true'){
+    blog_loop=true;
+  }else{
+    blog_loop=false;
+  }
+  // Home Two
+  if(jQuery("#vwshopbycategory-loop").text()=='true'){
+    vwshopbycategory_loop=true;
+  }else{
+    vwshopbycategory_loop=false;
+  }
+  if(jQuery("#vwshop-by-brand").text()=='true'){
+    vwbrand_loop=true;
+  }else{
+    vwbrand_loop=false;
+  }
+  if(jQuery("#ourexclusives_loop").text()=='true'){
+    ourexclusives_loop=true;
+  }else{
+    ourexclusives_loop=false;
+  }
+  if(jQuery("#vwdealofday_loop").text()=='true'){
+    vwdealofday_loop=true;
+  }else{
+    vwdealofday_loop=false;
+  }
+  if(jQuery("#vwtestimonial_loop").text()=='true'){
+    vwtestimonial_loop=true;
+  }else{
+    vwtestimonial_loop=false;
+  }
+  if(jQuery("#vwbestseller_loop").text()=='true'){
+    vwbestseller_loop=true;
+  }else{
+    vwbestseller_loop=false;
+  }
+  if(jQuery("#vwitemsonsale_loop").text()=='true'){
+    vwitemsonsale_loop=true;
+  }else{
+    vwitemsonsale_loop=false;
+  }
+  if(jQuery("#vwourblog_loop").text()=='true'){
+    vwourblog_loop=true;
+  }else{
+    vwourblog_loop=false;
+  }
+
+  var owl = jQuery('#browse-categories .owl-carousel');
+  owl.owlCarousel({
+    margin: 0,
+    nav:false,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 3000,
+    loop: browse_loop,
+    dots: true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      700: {
+        items: 3
+      },
+      1000: {
+        items: 6
+      },
+      1200: {
+        items: 7
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#featured-product .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:false,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: recents_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      767: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#shop-by-brand .owl-carousel');
+  owl.owlCarousel({
+    margin: 10,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: shop_by_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      },
+      1200: {
+        items: 8
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#video-product .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: video_game_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      },
+      1200: {
+        items: 6
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#client-worked .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: client_worked_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#best-seller .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: best_seller_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 3
+      },
+      1000: {
+        items: 6
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#features .owl-carousel');
+  owl.owlCarousel({
+    margin: 10,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: true,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      },
+      1200: {
+        items: 5
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#recommended .owl-carousel');
+  owl.owlCarousel({
+    margin: 25,
+    nav:false,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: true,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#our_products .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: false,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      },
+      1200: {
+        items: 1
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#our-blog .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: true,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1200: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  // Second Home Page Features
+  var owl = jQuery('#vwfeatures .owl-carousel');
+  owl.owlCarousel({
+    margin: 10,
+    nav:true,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: false,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1200: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#vwshop-by-category .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwshopbycategory_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      },
+      1200: {
+        items: 6
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#vwshop-by-brand .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwbrand_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      },
+      1200: {
+        items: 6
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#vwour-exclusives .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav:true,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    center: true,
+    loop: ourexclusives_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      767: {
+        items: 2
+      },
+      1000: {
+        items: 2
+      },
+      1200: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+  var owl = jQuery('#vwdealof_day .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav: false,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwdealofday_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      767: {
+        items: 1
+      },
+      1000: {
+        items: 2
+      },
+      1200: {
+        items: 2
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#testimonial .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav: false,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    center: true,
+    loop: vwtestimonial_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      767: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1200: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#vwbestseller .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav: false,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwbestseller_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 2
+      },
+      600: {
+        items: 2
+      },
+      767: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      },
+      1200: {
+        items: 6
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#vwitemsonsale .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav: true,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwitemsonsale_loop,
+    dots: false,
+    autoplayHoverPause:true,
+    navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      767: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      },
+      1200: {
+        items: 6
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#vwourblog .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav: false,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwourblog_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      767: {
+        items: 2
+      },
+      1000: {
+        items: 2
+      },
+      1200: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#vwtop_sale_banner .owl-carousel');
+  owl.owlCarousel({
+    margin: 20,
+    nav: false,
+    autoplay : false,
+    lazyLoad: true,
+    autoplayTimeout: 5000,
+    loop: vwourblog_loop,
+    dots: true,
+    autoplayHoverPause:true,
+    navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      767: {
+        items: 2
+      },
+      1000: {
+        items: 2
+      },
+      1200: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
+  new WOW().init();
+
+
+  jQuery('body').on('added_to_cart', function(e, fragments, cart_hash, button) {
+      var product = '';
+      var img = '';
+      var title = '';
+      var url = '';
+
+      var home_url = vw_custom_script_obj.home_url;
+
+      if ( vw_custom_script_obj.is_home == "1" ) {
+        var product = jQuery(button).closest('.inner_product');
+        var img = product.find('img').attr('src');
+        var title = product.find('.product_head a').text();
+        var url = product.find('.woocommerce-loop-product__link').attr('href');
+      } else {
+        var product = jQuery(button).closest('.product');
+        var img = product.find('img').attr('src');
+        var title = product.find('.woocommerce-loop-product__title').text();
+        var url = product.find('.product_head a').attr('href');
+      }
+
+      if ( product != '' ) {
+        jQuery.notify({
+          icon: img,
+          title: title,
+          message: "Product has been added to your <a href=" + home_url + "/cart>cart</a>.",
+          url: url
+        }, {
+          type: 'minimalist',
+          delay: "3000",
+          icon_type: 'image',
+          template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+            '<img data-notify="icon" class="img-circle pull-left">' +
+            '<span class="prod-title" data-notify="title">{1}</span>' +
+            '<div class="prod-messg" data-notify="message">{2}</div>' +
+            '</div>'
+        });
+      }
+
+    });
+});
+
+var interval=null;
+function show_loading_box() {
+  setTimeout(function(){
+    jQuery(".grocery-spinner").css("display","none");
+  }, 1000);
+}
+jQuery('document').ready(function(){
+  interval = setInterval(show_loading_box,20000);
+  setTimeout(function(){
+    jQuery('#popupmodal').modal('show');
+  }, 10000);
+
+  // ------ Counter -------
+  var count_no="yes";
+  jQuery('#our-records').on('appear',function(){
+    if(count_no=="yes"){
+      count_no="no";
+      jQuery('.vw-count').each(function () {
+        jQuery(this).prop('Counter',0).animate({
+            Counter: jQuery(this).text()
+        }, {
+            duration: 8000,
+            easing: 'swing',
+            step: function (now) {
+               jQuery(this).text(Math.ceil(now));
+            }
+        });
+      });
+    }
+  });
+  jQuery('#our-records').appear();
+
+  // ------------ Scroll Top ---------------
+  jQuery(window).scroll(function() {
+    if (jQuery(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      jQuery('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+      jQuery('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+  });
+  jQuery('#return-to-top').click(function() {      // When arrow is clicked
+    jQuery('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+    }, 2000);
+  });
+
+  var total_visitor=parseInt(jQuery('#vw-total-visitors').text());
+  jQuery('#vw-testimonial .owl-dots').addClass('custom-dots');
+  jQuery('#vw-testimonial .owl-dots').removeClass('owl-dots');
+  for(i=1;i<=total_visitor;i++){
+    jQuery('#vw-testimonial .custom-dots button:nth-child('+i+')').append('<span class="vw-custom-dots">0'+i+'</span>');
+  }
+
+  jQuery('document').ready(function(){
+    jQuery('#recommended .deals-flipkart-tabs .nav-item a').click(function(){
+      jQuery('#recommended .deals-flipkart-tabs .nav-item a').removeClass('active');
+    });
+  });
+
+  jQuery('#video-product li a').click(function(){
+    jQuery('#video-product  li a').removeClass('active');
+  });
+
+  jQuery('#our-menu li a').click(function(){
+    jQuery('#our-menu  li a').removeClass('active');
+  });
+
+  jQuery('#product-collection li a').click(function(){
+
+  jQuery('#product-collection li a').removeClass('active');
+  });
+
+  jQuery('#myBtn').click(function(){
+    jQuery("#myNewModal").css("display","block");
+  });
+  jQuery('.close-one').click(function(){
+    jQuery("#myNewModal").css("display","none");
+  });
+
+  jQuery('#myvideoBtn').click(function(){
+    jQuery("#myvideoModal").css("display","block");
+  });
+  jQuery('.close-one').click(function(){
+    jQuery("#myvideoModal").css("display","none");
+  });
+
+  // Home Two
+  jQuery('document').ready(function(){
+
+    jQuery('#vwshop-by-category ul li a').click(function(){
+      jQuery('#vwshop-by-category ul li a').removeClass('active');
+    });
+
+    // using jquery add number of page to span
+    var i = 1;
+    jQuery('#vwdealof_day .owl-dot').each(function(){
+      jQuery(this).children('span').text(jQuery(this).index()+i);
+    });
+
+    jQuery('#wp-block-search__input-1').attr('placeholder',"Search...");
+
+  });
+
+  jQuery('#video-product .button-cart a').text('');
+  jQuery('#video-product .button-cart a').append('<i class="fas fa-shopping-basket"></i>');
+  jQuery('#best-seller .featured-cart a').text('');
+  jQuery('#best-seller .featured-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+  // Home Two
+
+  jQuery('.vwproduct-search-info button').text('');
+  jQuery('.vwproduct-search-info button').append('<i class="fas fa-search"></i>');
+
+  jQuery('#vwshop-by-category .vwbutton-cart a').text('');
+  jQuery('#vwshop-by-category .vwbutton-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+  jQuery('#vwfeatured_products .vwbutton-cart a').text('');
+  jQuery('#vwfeatured_products .vwbutton-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+  jQuery('#vwour-exclusives .vwbutton-cart a').text('');
+  jQuery('#vwour-exclusives .vwbutton-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+  jQuery('#vwdealof_day .vwbutton-cart a').text('');
+  jQuery('#vwdealof_day .vwbutton-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+  jQuery('#vwbestseller .vwbutton-cart a').text('');
+  jQuery('#vwbestseller .vwbutton-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+  jQuery('#vwitemsonsale .vwbutton-cart a').text('');
+  jQuery('#vwitemsonsale .vwbutton-cart a').append('<i class="fas fa-shopping-basket"></i>');
+
+
+  interval = setInterval(show_loading_box,1000);
+
+  var p1="yes";
+  jQuery("#skills-box").on('appear',function() {
+    if(p1=="yes"){
+      p1="no";
+      jQuery(this).find(".progress_bar_8").each(function() {
+        jQuery(this).find(".vc_bar").delay(0).animate({
+            width: jQuery(this).attr("data-percent"),
+        }, 1000);
+      });
+    }
+  });
+  jQuery("#skills-box").appear();
+  jQuery('.close-one').click(function(){
+    jQuery('.modal-backdrop').remove();
+    jQuery('.modal-open').css("overflow-y","scroll");
+    jQuery('.modal-open').css("padding-right","0");
+  });
+
+});
+
+jQuery('document').ready(function(){
+
+  var totat_events=parseInt(jQuery('.total-event-count').text());
+  if(totat_events>=1) {
+    for(i=1;i<=totat_events;i++) {
+      var mydate =jQuery('.comingdate'+i).val();
+      jQuery(".comingcountdown"+i).each(function(){
+        our_events_timer(jQuery(this),mydate);
+      });
+
+      var soldval = jQuery('.sold_value_'+i).val();
+      var product_stock_qty = jQuery('.sold_value_'+i).attr('data-quantity');
+      // console.log("sold_value_"+i+'='+soldval);
+
+      let total_qty = product_stock_qty + soldval;
+      var mybarwidth = soldval/total_qty * 100;
+
+      jQuery('.myBar_'+i).css('width',mybarwidth+'%');
+
+    }
+  }
+  // Weekly Deal Counter
+  function our_events_timer($timer,mydate){
+    // Set the date we're counting down to
+    var countDownDate = new Date(mydate).getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+      // Get todays date and time
+      var now = new Date().getTime();
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="timer"
+      $timer.html( "<span class='numbers'>" + days + "<br><span class='nofont'>Days</span>" + "</span>" + "   " +"<span class='numbers'>" + hours + "<br><span class='nofont'>Hours</span>" + "</span>" + "   " + "<span class='numbers'>" + minutes + "<br><span class='nofont'>Minutes</span>" + "</span>" + "   " + "<span class='numbers'>" + seconds + "<br><span class='nofont'>Seconds</spn" + "</span>");
+      // If the count down is over, write some text
+      if (distance < 0) {
+          clearInterval(x);
+          $timer.html("Timer Up -EVENT EXPIRED");
+      }
+    }, 1000);
+  }
+
+});
